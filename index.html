@@ -1,0 +1,35 @@
+<html ng-app="perdocoApp">
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+</head>
+
+<body ng-controller="MainController">
+  
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+      <div class="collapse navbar-collapse" id="id_of_menu">
+        <ul class="nav navbar-nav">
+          <li ng-repeat="menu in menus">
+            <a href={{menu.url}}>{{menu.name}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div ng-view></div>
+  
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
+  
+  <script src="app.js"></script>
+</body>
+
+</html>
